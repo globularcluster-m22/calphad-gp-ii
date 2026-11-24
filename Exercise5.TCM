@@ -2,40 +2,94 @@
  @@ 
 
 go da
-sw user C:\Users\Matej\Downloads\Ag-Cu.TDB
-def-sys ag cu
-l-s
-CONSTITUENT
+sw user /Users/maedhros/calphad-gp2/db/Fe-Al.TDB
+d-sys fe al
 get
 go p-3
-s-c t=1000 p=1e5 n=1 x(cu)=0.3
+rei
+s-c t=1000 p=1e5 n=1 x(al)=0.3
 c-e
-s-a-v 1 x(cu) 0 1 0.025
-s-a-v 2 t 800 1400 42.5
-l-c
+s-a-v 1 x(al) 0 1 0.025
+s-a-v 2 t 300 2000 42.5
+map
+post
+s-d-a x m-f al
+s-d-a y t-c
+s-s x n 0 1
+set-title Fe-Al phase diagram
+set-lab n
+add .2 800
+y
+.3
+add .3 1500
+y
+.3
+add .45 1300
+y
+.3
+add .85 900
+y
+.3
+add .85 400
+y
+.3
+add .58 500
+y
+.25
+add .69 300
+y
+.2
+add .732 150
+y
+.2
+add .57 1180
+y
+.2
+add .005 1150
+y
+.25
+plot
+back
+
+go da
+sw user /Users/maedhros/calphad-gp2/db/Ag-Cu.TDB
+d-sys ag cu
+get
+go p-3
+rei
+s-c t=1000 p=1e5 n=1 x(cu)=0.5
 c-e
+s-a-v 1 x(cu) 0 1 0.01
+s-a-v 2 t 600 1400 5
 map
 post
 s-d-a x m-f cu
-s-d-a y t_c
-set-title Ag-Cu
-add 0.4 950
-Y
-.36
-add 0.1 860
-Y
-.36
-add 0.8 830
-Y
-.36
-add 0.03 700
-Y
-.36
-add 0.995 700
-Y
-.36
-add 0.5 500
-Y
-.36
+s-d-a y t-c
+s-s y n 600 1100
+set-title Ag-Cu phase diagram
+add .5 1000
+y
+.3
+add .15 850
+y
+.3
+add .72 820
+y
+.3
+add .4 700
+y
+.3
+add .02 650
+n
+FCC#1
+.25
+add .968 700
+n
+FCC#2
+.25
+add .43 768
+n
+Eutectic L = FCC#1 + FCC#2 (780 C)
+.3
 plot
-exit
+
