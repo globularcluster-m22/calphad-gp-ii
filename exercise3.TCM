@@ -1,0 +1,25 @@
+@@ Log file generated 2026-11-17
+ @@ 
+
+go d
+sw FEDEMO
+def-el FE
+l-sys ph
+rej ph *
+res ph LIQUID BCC_A2 FCC_A1 HCP_A3
+get
+go p-3
+s-c t=300 p=1E5 n=1
+ch-st ph *=sus
+ch-st ph BCC_A2=ent 1
+s-a-v 1 t 300 2000 10
+step normal
+post
+s-d-a x t
+s-d-a y gm(bcc_a2)
+plot
+s-d-a y hm(bcc_a2)
+plot
+s-d-a y hm.t(bcc_a2)
+plot
+exit

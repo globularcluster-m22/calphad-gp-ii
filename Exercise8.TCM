@@ -1,0 +1,41 @@
+@@ Log file generated 2026-11-24
+ @@ 
+
+go bin
+TCBIN
+Fe
+C
+Phase_Diagram
+back
+go p-3
+read,,,
+c-st p *=sus
+c-st p d011_cementite=ent 1
+s-c x(fe)=none
+s-c t=1273.15 p=1e5 n=1 x(c)=0.25
+l-c
+c-e
+sho gm
+s-c t=1000
+c-e
+sho hm.t
+s-c t=300
+c-e
+s-a-v 1 t 300 1500 10
+s-a-v 2 none
+step normal
+post
+s-d-a x t
+s-d-a y gm
+set-title Fe3C GM
+plot
+s-d-a y hm
+set-title Fe3C HM
+plot
+back
+s-c t=1273.15
+s-r-s fe fcc_a1 * 1e5
+s-r-s c graphite_a9 * 1e5
+c-e
+sho gmr
+exit

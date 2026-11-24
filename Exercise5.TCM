@@ -1,0 +1,41 @@
+@@ Log file generated 2026-11-24
+ @@ 
+
+go da
+sw user C:\Users\Matej\Downloads\Ag-Cu.TDB
+def-sys ag cu
+l-s
+CONSTITUENT
+get
+go p-3
+s-c t=1000 p=1e5 n=1 x(cu)=0.3
+c-e
+s-a-v 1 x(cu) 0 1 0.025
+s-a-v 2 t 800 1400 42.5
+l-c
+c-e
+map
+post
+s-d-a x m-f cu
+s-d-a y t_c
+set-title Ag-Cu
+add 0.4 950
+Y
+.36
+add 0.1 860
+Y
+.36
+add 0.8 830
+Y
+.36
+add 0.03 700
+Y
+.36
+add 0.995 700
+Y
+.36
+add 0.5 500
+Y
+.36
+plot
+exit

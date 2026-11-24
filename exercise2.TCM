@@ -1,0 +1,75 @@
+@@ Log file generated 2026-11-17
+ @@ 
+
+ 
+ 
+go da
+sw PURE5
+def-sys
+Ni
+get
+?
+l-s
+PHASES
+go p-3
+?
+SET_REFERENCE_STATE
+Ni
+FCC_A1
+*
+1e5
+CHANGE_STATUS
+PHASES
+*
+sus
+CHANGE_STATUS
+PHASES
+FCC_A1
+ENTERED
+0
+ 
+s-c t=1720
+s-c p=1e5
+s-c n=1
+c-e
+SHOW_VALUE
+HM
+SHOW_VALUE
+SM
+set-input
+exit
+?
+go da
+sw PURE5
+def-sys
+Ni
+get
+l-s
+PHASES
+go p-3
+SET_REFERENCE_STATE
+Ni
+FCC_A1
+*
+1e5
+CHANGE_STATUS
+PHASES
+*
+sus
+CHANGE_STATUS
+PHASES
+LIQUID
+ENTERED
+0
+ 
+s-c t=1720
+s-c p=1e5
+s-c n=1
+c-e
+SHOW_VALUE
+HM
+SHOW_VALUE
+SM
+set-inter
+reinitiate-module
+exit

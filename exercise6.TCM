@@ -1,0 +1,298 @@
+@@ Log file generated 2026-11-22
+ @@ 
+go bin
+TCBIN
+Cu
+Ni
+Phase_Diagram
+set-title Cu-Ni phase diagram
+plot
+back
+
+go bin
+TCBIN
+Cu
+Ni
+G
+800
+set-title G-curves 1073 K
+plot
+back
+
+go bin
+TCBIN
+Cu
+Ni
+G
+1084
+set-title G-curves 1357 K
+plot
+back
+
+go bin
+TCBIN
+Cu
+Ni
+G
+1200
+set-title G-curves 1473 K
+plot
+back
+
+go bin
+TCBIN
+Cu
+Ni
+G
+1455
+set-title G-curves 1728 K
+plot
+back
+
+go bin
+TCBIN
+Cu
+Ni
+G
+1600
+set-title G-curves 1873 K
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+Phase_Diagram
+set-title Nb-V phase diagram
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+2500
+set-title Nb-V G-curves 2500 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+2476
+set-title Nb-V G-curves 2476 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+2200
+set-title Nb-V G-curves 2200 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+1909
+set-title Nb-V G-curves 1909 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+1870
+set-title Nb-V G-curves 1870 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+1857
+set-title Nb-V G-curves 1857 C
+plot
+back
+
+go bin
+TCBIN
+Nb
+V
+G
+1800
+set-title Nb-V G-curves 1800 C
+plot
+back
+
+go da
+sw USER /Users/maedhros/calphad-gp2/db/Fe-Cu.TDB
+d-sys Fe Cu
+get
+go p-3
+s-c t=1800 p=1e5 n=1 x(cu)=0.5
+c-e
+s-a-v 1 x(cu) 0 1 0.005
+s-a-v 2 t 1000 1900 2
+map
+post
+s-d-a x m-f cu
+s-d-a y t-k
+set-title Fe-Cu phase diagram
+add-label-text 0.1 1800 N Peritectic L+BCC=FCC (1760 K)
+add-label-text 0.5 1390 N 2nd peritectic L+FCC(Fe)=FCC(Cu) (1369 K)
+plot
+back
+
+go p-3
+s-c t=1900
+s-a-v 1 x(cu) 0 1 0.01
+step one_phase_at_time
+post
+s-d-a x m-f cu
+s-d-a y gm(*)
+*
+set-title Fe-Cu GM(*) 1900 K
+plot
+back
+
+go p-3
+s-c t=1780
+c-e
+step one_phase_at_time
+post
+s-d-a x m-f cu
+s-d-a y gm(*)
+*
+set-title Fe-Cu GM(*) 1780 K
+plot
+back
+
+go p-3
+s-c t=1760
+c-e
+step one_phase_at_time
+post
+s-d-a x m-f cu
+s-d-a y gm(*)
+*
+set-title Fe-Cu GM(*) 1760 K
+plot
+back
+
+go p-3
+s-c t=1730
+c-e
+step one_phase_at_time
+post
+s-d-a x m-f cu
+s-d-a y gm(*)
+*
+set-title Fe-Cu GM(*) 1730 K
+plot
+back
+
+go p-3
+s-c t=1600
+c-e
+step one_phase_at_time
+post
+s-d-a x m-f cu
+s-d-a y gm(*)
+*
+set-title Fe-Cu GM(*) 1600 K
+plot
+back
+
+go da
+sw USER /Users/maedhros/calphad-gp2/db/Ag-Cu.TDB
+d-sys Ag Cu
+get
+go p-3
+s-c t=1100 p=1e5 n=1 x(cu)=0.5
+c-e
+s-a-v 1 x(cu) 0 1 0.005
+s-a-v 2 t 700 1400 2
+map
+post
+s-d-a x m-f cu
+s-d-a y t-k
+set-title Ag-Cu phase diagram
+add-label-text 0.42 1070 N Eutectic L=FCC(Ag)+FCC(Cu) (~1053 K)
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+Phase_Diagram
+set-title Pb-Sn phase diagram
+add-label-text 0.5 195 N Eutectic L=FCC(Pb)+BCT(Sn) (183 C)
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+G
+350
+set-title Pb-Sn G-curves 350 C
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+G
+280
+set-title Pb-Sn G-curves 280 C
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+G
+200
+set-title Pb-Sn G-curves 200 C
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+G
+183
+set-title Pb-Sn G-curves 183 C
+plot
+back
+
+go bin
+TCBIN
+Pb
+Sn
+G
+150
+set-title Pb-Sn G-curves 150 C
+plot
+back
+
+set-interactive
