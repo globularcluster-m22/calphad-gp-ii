@@ -1,0 +1,283 @@
+@@ Log file generated 2026-11-24
+ @@ 
+
+go data user
+user
+sw user
+def-sys fe c
+get
+go poly
+s-c p=100000 n=1 t=1000 w(c)=0.02
+s-a-v 1 w(c) 0 0.07 0.0005
+s-a-v 2 t 673.15 1873.15 10
+c-e
+map
+post
+s-d-a x w-p(c)
+ 
+s-d-a x w-p(c)
+c
+s-d-a y t-c
+s-s-s x 0 7
+ 
+s-m-s x 0 7
+s-s-s x n 0 7
+s-s-s y n 400 1600
+s-t Fe-C stable (Fe-Graphite)
+SET_TITLE Fe-C stable (Fe-Graphite)
+a-l-t 3.1 1415 LIQUID
+a-l-t 1.1 1015 FCC_A1
+.36
+a-l-t 1.65 1325 LIQUID+FCC_A1
+a-l-t 5.75 1360
+.36
+a-l-t 3.6 940 FCC_A1+GRAPHITE
+ 
+a-l-t 3.6 940 FCC_A1+GRAPHITE
+FCC_A1+GRAPHITE
+.36
+a-l-t 3.6 570 BCC_A2+GRAPHITE
+a-l-t 3.1 1415 LIQUID
+a-l-t 1.1 1015 FCC_A1
+a-l-t 1.65 1325 LIQUID+FCC_A1
+a-l-t 5.75 1360 LIQUID+GRAPHITE
+a-l-t 3.6 940 FCC_A1+GRAPHITE
+a-l-t 3.6 570 BCC_A2+GRAPHITE
+a-l-t 1.45 1495 Peritectic (1495 C): L + BCC_A2 <-> FCC_A1
+a-l-t 3.5 1125 Eutectic (1154 C): L <-> FCC_A1 + GRAPHITE
+a-l-t 3.5 708 Eutectoid (738 C): FCC_A1 <-> BCC_A2 + GRAPHITE
+plot
+dump png Fe-C_stable_TC.png
+a-l-t 3.1 1415 LIQUID
+a-l-t 1.1 1015 FCC_A1
+a-l-t 1.65 1325 LIQUID+FCC_A1
+a-l-t 5.75 1360 LIQUID+GRAPHITE
+a-l-t 3.6 940 FCC_A1+GRAPHITE
+a-l-t 3.6 570 BCC_A2+GRAPHITE
+a-l-t 1.45 1495 Peritectic (1495 C): L + BCC_A2 <-> FCC_A1
+a-l-t 3.5 1125 Eutectic (1154 C): L <-> FCC_A1 + GRAPHITE
+a-l-t 3.5 708 Eutectoid (738 C): FCC_A1 <-> BCC_A2 + GRAPHITE
+plot
+dump png Fe-C_stable_TC.png
+d-l-t
+a-l-t 3.1 1415
+LIQUID
+ 
+a-l-t 1.1 1015
+FCC_A1
+ 
+a-l-t 1.65 1325
+LIQUID+FCC_A1
+ 
+a-l-t 5.75 1360
+LIQUID+GRAPHITE
+ 
+a-l-t 3.6 940
+FCC_A1+GRAPHITE
+ 
+a-l-t 3.6 570
+BCC_A2+GRAPHITE
+ 
+a-l-t 1.45 1495
+Peritectic (1495 C): L + BCC_A2 <-> FCC_A1
+.36
+a-l-t 3.5 1125
+Eutectic (1154 C): L <-> FCC_A1 + GRAPHITE
+.36
+a-l-t 3.5 708
+Eutectoid (738 C): FCC_A1 <-> BCC_A2 + GRAPHITE
+.36
+plot
+dump png Fe-C_stable_TC.png
+a-l-t 3.1 1415
+LIQUID
+0.32
+a-l-t 1.1 1015
+FCC_A1
+0.32
+a-l-t 1.65 1325
+LIQUID+FCC_A1
+0.32
+a-l-t 5.6 1185
+LIQUID+CEMENTITE
+0.32
+a-l-t 3.3 900
+FCC_A1+CEMENTITE
+0.32
+a-l-t 3.3 570
+BCC_A2+CEMENTITE
+0.32
+a-l-t 1.45 1495
+Peritectic (1495 C): L + BCC_A2 <-> FCC_A1
+0.30
+a-l-t 3.5 1118
+Eutectic (1147 C): L <-> FCC_A1 + CEMENTITE
+0.30
+a-l-t 3.3 698
+Eutectoid (727 C): FCC_A1 <-> BCC_A2 + CEMENTITE
+0.30
+plot
+dump png Fe-C_metastable_TC.png
+d-l-t all
+d-l-t 0
+plot
+d-l-t help
+DELETE_LABEL_TEXT
+back
+post
+s-d-a x w-p c
+s-d-a y t-c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C stable (Fe-Graphite)
+a-l-t 3.1 1415
+LIQUID
+0.32
+a-l-t 1.1 1015
+FCC_A1
+0.32
+a-l-t 1.65 1325
+LIQUID+FCC_A1
+0.32
+a-l-t 5.75 1360
+LIQUID+GRAPHITE
+0.32
+a-l-t 3.6 940
+FCC_A1+GRAPHITE
+0.32
+a-l-t 3.6 570
+BCC_A2+GRAPHITE
+0.32
+a-l-t 0.35 1545
+<- BCC_A2 (delta)
+0.26
+a-l-t 0.35 620
+<- BCC_A2 (alpha)
+0.26
+a-l-t 1.45 1495
+Peritectic (1495 C): L + BCC_A2 <-> FCC_A1
+0.28
+a-l-t 3.5 1125
+Eutectic (1154 C): L <-> FCC_A1 + GRAPHITE
+0.28
+a-l-t 3.5 708
+Eutectoid (738 C): FCC_A1 <-> BCC_A2 + GRAPHITE
+0.28
+plot
+dump png Fe-C_stable_TC.png
+back
+post
+s-d-a x w-p c
+s-d-a y t-c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C stable (Fe-Graphite)
+a-l-t 3.1 1415
+LIQUID
+0.32
+a-l-t 1.1 1015
+FCC_A1
+0.32
+a-l-t 1.65 1325
+LIQUID+FCC_A1
+0.32
+a-l-t 5.75 1360
+LIQUID+GRAPHITE
+0.32
+a-l-t 3.6 940
+FCC_A1+GRAPHITE
+0.32
+a-l-t 3.6 570
+BCC_A2+GRAPHITE
+0.32
+plot
+a-l-t 1.35 1502
+Peritectic 1495 C - L + BCC_A2 = FCC_A1
+0.28
+a-l-t 3.2 1122
+Eutectic 1154 C - L = FCC_A1 + GRAPHITE
+0.28
+a-l-t 3.2 705
+Eutectoid 738 C - FCC_A1 = BCC_A2 + GRAPHITE
+0.28
+plot
+back
+c-s ph graphite=sus
+s-c p=100000 n=1 t=1000 w(c)=0.02
+c-e
+map
+post
+s-d-a x w-p c
+s-d-a y t-c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C metastable (Fe-Fe3C)
+plot
+back c-s ph *=sus
+s-s ph liquid bcc_a2 fcc_a1 cementite=ent
+c-s ph liquid bcc_a2 fcc_a1 cementite=ent
+0
+s-c p=100000 n=1 t=1000 w(c)=0.02
+c-e
+map
+post
+s-d-a x w-p c
+s-d-a y t-c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C metastable (Fe-Fe3C)
+plot
+back l-s
+back
+l-s
+CONSTITUENT
+reject phase graphite diamond
+get#
+get
+go poly
+s-c p=100000 n=1 t=1000 w(c)=0.02
+s-a-v 1 w(c) 0 0.07 0.0005
+s-a-v 2 t 673.15 1873.15 10
+c-ee
+c-e
+map
+post
+s-d-a x w-p
+c
+s-d-a y t-c
+s-s-s n 0 7
+s-d-a x w-p c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C metastable (Fe-Fe3C)
+plot
+back
+c-s ph graphite=sus
+c-s diamond=sus
+c-s ph diamond=sus
+s-c p=100000 n=1 t=1000 w(c)=0.02
+c-e
+map
+plot
+post
+s-da x w-p c
+s-d-a x w-p c
+s-d-a y t-c
+s-s-s x n 0 7
+s-s-s y n 400 1600
+SET_TITLE Fe-C metastable (Fe-Fe3C)
+plot
+a-l-t 1.25 1512
+1495 C - L + BCC_A2 = FCC_A1
+0.28
+a-l-t 3.2 1118
+1147 C - L = FCC_A1 + CEMENTITE
+0.28
+a-l-t 3.1 698
+727 C - FCC_A1 = BCC_A2 + CEMENTITE
+0.28
+plot
+a-l-t 0.35 1495
+1495 C - L + BCC_A2 = FCC_A1
+0.28
+plot

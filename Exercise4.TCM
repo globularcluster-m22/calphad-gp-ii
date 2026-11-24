@@ -1,0 +1,131 @@
+@@ Log file generated 2026-11-24
+ @@ 
+
+go data
+sw fedemo
+def-sys fe
+l-s
+CONSTITUENT
+get
+go p-3
+s-c
+ 
+ 
+ 
+s-c t=1000 p=100000 n=1
+c-e
+s-a-v 1 t 300 2000 10
+step
+NORMAL
+go post
+ 
+post
+s-d-a x t
+s-d-a y gm(*)
+*
+ 
+s-d-a y gm(*)
+*
+plot
+go p-3
+c-s ph *=sus
+go p-3
+go p-3
+back
+c-s ph *=sus
+l-s
+l-c
+c-s ph bcc_a2=ent 1
+s-c t=1000 p=100000 n=1
+c-e
+s-a-v 1 t 300 2000 10
+step
+NORMAL
+post
+s-d-a x t
+s-d-a y gm(bbc_a2)
+plot
+s-d-a y gm(bcc_a2)
+plot
+s-d-a y hm(bcc_a2)
+plot
+s-d-a y cp(bcc_a2)
+plot
+s-d-a y cp(bcc_a2)
+s-d-a y hm(bcc_a2).t
+back
+ent-fun cpbcc=hm(bcc_a2).t;
+ent-fun cpfcc=hm(fcc_a1).t;
+ent-fun cphcp=hm(hcp_a3).t;
+ent-fun cpliq=hm(liquid).t;
+c-e
+step
+NORMAL
+post
+s-d-a x t
+s-d-a y cpbcc
+back
+ent-sym function cpbcc=hm(bcc_a2).t;
+ent-sym function cpfcc=hm(fcc_a1).t;
+ent-sym function cphcp=hm(hcp_a3).t;
+ent-sym function cpliq=hm(liquid).t;
+c-e
+step
+NORMAL
+post
+s-d-a x t
+s-d-a y cpbcc
+plot
+l-d-t cp_bcc.txt
+back
+c-s ph *=sus
+c-s ph fcc_a1=ent 1
+c-e
+step
+NORMAL
+post
+s-d-a x t
+s-d-a x gm(gcc_a1)
+plot
+s-d-a y gm(fcc_a1)
+plot
+s-d-a y hm(fcc_a1)
+plot
+s-d-a y cpfcc
+plot
+back
+c-s ph *=sus
+c-s ph bcc_a2 liquid=ent 1
+c-e
+step
+post
+s-d-a x t
+s-d-a y gm(*)
+c-s ph *=sus
+c-s ph bcc_a2 liquid=ent 1
+c-e
+post
+s-d-a x t
+s-d-a y gm(*)
+*
+plot
+s-s-s x n 1000 2000
+s-s-s y n -130000 -40000
+plot
+back
+c-s ph *=sus
+c-s ph bcc_a2=ent
+1
+s-a-v 1 t 300 1000 10
+c-e
+step
+NORMAL
+post
+s-d-a x t
+s-d-a y cpbcc
+plot
+dump cp_bcc_clean.txt
+dump
+column
+l-d-t
+cp_bcc_table.txt
